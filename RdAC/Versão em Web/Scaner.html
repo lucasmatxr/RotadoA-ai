@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Leitor de código QRCode</h1>
+    <div class="app__layout">
+        <header class="app__header" onclick="window.open('https:https://www.gov.br/mdr/pt-br');">
+            <span class="app__header-icon"><img src="#"></span>
+            <div class="app_online">Conectados
+            </div>
+            <span class="app__title">QR Code Scanner</span>
+        </header>
+        <main class="app__layout-content">
+            <video id="qr-video" playsinline="" disablepictureinpicture="">
+            </video>
+            <div class="videobg">
+
+            </div>
+            <div class="app__dialog app__qrcode app__dialog--hide">
+                <div class="app__dialog-content">
+                    <h5>Código QR</h5>
+                    <img src="../qrcode/close.svg" class="app__dialog-close">
+                    <input type="text" id="result">
+                </div>
+                <div class="app__dialog-actions">
+                    <button type="button" class="app__dialog-open" id="app__open">
+                        <img src="../qrcode/url.svg">
+                        <span>Abrir URL</span>
+                    </button>
+                </div>
+                <div class="app__dialog-actions">
+                    <button type="button" class="app__dialog-open app__dialog-edit">
+                        <img src="../qrcode/qrcodeeditor.svg">
+                        <span>Editar código QR</span>
+                    </button>
+                </div>
+            </div>
+            <div class="app__dialog app__share app__dialog--hide">
+                <div class="app__dialog-content" style="text-align: center;width: calc(100% - 18px);">
+                    <h5 class="mzp-u-title-sm">Compartilhar</h5>
+                    <img src="../qrcode/close.svg" class="app__share-close">
+                    <div class="showshare">
+                        <div class="addthis_inline_share_toolbox_ugb4" style="margin: 0 auto;">
+
+                        </div>
+                    </div>
+                    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5c79ed52985d2a1e"></script>
+                    <div class="showinfo">Compartilhe o scanner de código QR online com meus parentes e amigos
+                    </div>
+                </div>
+            </div>
+            <div class="c-block-media-img">
+                <div class="c-chart">
+                    <table id="compare-table" class="mzp-u-data-table c-compare-table">
+                            <thead>
+                                <tr>
+                                    <th>linguagens populares</th>
+                                     <th scope="col">
+                                        <img src="../qrcode/language.svg" height="36" width="36" alt="Firefox"></th>
+                                        </tr>
+                             </thead>
+                            <tbody>
+                                <tr><th scope="row"><a href="https://www.online-qr-scanner.com/">English</a></th>
+                                <td><a href="https://www.online-qr-scanner.com/fr/">Français</a></td></tr>
+                                <tr><th scope="row"><a href="https://www.online-qr-scanner.com/es/">Español</a></th>
+                                <td><a href="https://www.online-qr-scanner.com/pt/">Português</a></td></tr>
+                                <tr><th scope="row"><a href="https://www.online-qr-scanner.com/de/">Deutsch</a></th>
+                                <td><a href="https://www.online-qr-scanner.com/it/">Italiano</a></td></tr>
+                                <tr><th scope="row"><a href="https://www.online-qr-scanner.com/ru/">Русский</a></th>
+                                <td><a href="https://www.online-qr-scanner.com/ar/">العربية</a></td></tr>
+                                <tr><th scope="row"><a href="https://www.online-qr-scanner.com/zh-cn/">中文 (简体)</a></th>
+                                <td><a href="https://www.online-qr-scanner.com/ja/">日本語</a></td></tr>
+                            </tbody>
+                     </table>
+                 </div>
+                </div>
+             </div>
+         </div>
+    </div>
+    <div class="app__dialog app__about app__dialog--hide">
+        <div class="app__dialog-content">
+            <img src="../qrcode/close.svg" class="app__about-close">
+            <div class="t-compare c-block">
+                <div class="c-block-container">
+                    <div class="c-block-body l-v-center l-h-end">
+                                <h3 class="mzp-u-title-sm">Sobre o QR Code Scanner</h3>
+                                <p>Você não precisa instalar o software de digitalização de código QR em seu computador, tablet ou telefone celular para obter uma ferramenta de digitalização de código QR.<span>Agora o navegador entra no URL para escanear o código QR para identificar o código QR. Esta é a maior diferença entre nós e outros leitores de código QR.</span></p>
+                    </div>
+                    <div class="c-block-media l-v-end">
+                        <div class="c-block-media-img">
+                            <div class="c-chart">
+                                <table id="compare-table" class="mzp-u-data-table c-compare-table">
+                                    <thead>
+                                        <tr><th>Vantagens do QR Code Scanner:</th>
+                                        <th scope="col"><img src="../qrcode/qrcode-scanner.svg" height="36" width="36" alt="Firefox"></th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><th scope="row">Digitalização de alta velocidade</th>
+                                        <td><picture class=""><img src="../qrcode/check.svg" width="24" height="24" loading="lazy" class=""></picture></td></tr>
+                                        <tr><th scope="row">Não há necessidade de instalar</th>
+                                        <td><picture class=""><img src="../qrcode/check.svg" width="24" height="24" loading="lazy" class=""></picture></td></tr>
+                                        <tr><th scope="row">Edição de digitalização</th>
+                                        <td><picture class=""><img src="../qrcode/check.svg" width="24" height="24" loading="lazy" class=""></picture></td></tr>
+                                        <tr><th scope="row">Operação Multi-Plataforma</th>
+                                        <td><picture class=""><img src="../qrcode/check.svg" width="24" height="24" loading="lazy" class=""></picture></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="app__dialog app__dialog--hide">
+        <a href="qr-scanner">Scanner Qr</a>
+        <a href="qr-code-scanner">Scanner de código Qr</a>
+        <a href="qr-code-scan">Leitura de código Qr</a>
+        <a href="online-qr-code-scanner">Scanner de código Qr online</a>
+        <a href="qr-code-reader">Leitor de código Qr</a>
+        <a href="scanner">Scanner</a><a href="scan">Varredura</a>
+        <a href="how-to-scan-qr-code">Como escanear o código Qr</a>
+        <a href="how-do-i-scan-qr-code">Como faço para ler o código Qr</a>
+        <a href="how-scan-qr-code">Como escanear o código Qr</a>
+        <a href="how-to-scan-a-qr-code">Como ler um código Qr</a>
+        <a href="scan-the-qr-code">Digitalize o código Qr</a>
+        <a href="scan-app">Scan App</a><a href="google-qr-code">Código Qr do Google</a>
+        <a href="free-qr-code-scanner">Scanner de código Qr grátis</a>
+        <a href="qr-code-scannen">Qr Code Scannen</a>
+        <a href="scan-a-qr-code">Digitalize um código Qr</a>
+    </div>
+    <div class="app__dialog-overlay app__dialog--hide">
+    </div>
+    <div class="app__snackbar"></div>
+        <img src="" style="display: none;" id="frame" class="app__overlay">
+    </div>
+</div>
+</body>
+</html>
